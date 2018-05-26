@@ -3,12 +3,15 @@
  */
 package com.joelgtsantos.dijenction.services;
 
+import org.springframework.stereotype.Service;
+
 /**
  * @author Joel Santos
  *
  * dinjection
  * 2018
  */
+@Service
 public class GreetingRepositoryImpl implements GreetingRepository {
 
 	/* 
