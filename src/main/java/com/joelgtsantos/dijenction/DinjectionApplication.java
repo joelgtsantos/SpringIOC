@@ -8,6 +8,7 @@ import com.joelgtsantos.dijenction.controller.ConstructorInjectedController;
 import com.joelgtsantos.dijenction.controller.MyController;
 import com.joelgtsantos.dijenction.controller.PropertyInjectedController;
 import com.joelgtsantos.dijenction.controller.SetterInjectedController;
+import com.joelgtsantos.dijenction.examplebeans.FakeDataSource;
 
 
 /**
@@ -28,5 +29,8 @@ public class DinjectionApplication {
 		System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
 		System.out.println(ctx.getBean(SetterInjectedController.class).sayHello());
 		System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
+		
+		FakeDataSource fakeDataSource = ctx.getBean(FakeDataSource.class);
+		System.out.println(fakeDataSource.getUser());
 	}
 }
